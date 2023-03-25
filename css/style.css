@@ -20,7 +20,7 @@ a {
     text-decoration-line: inherit;
 }
 
-ul, ol {
+ul {
     list-style-type: none;
 }
 
@@ -496,7 +496,7 @@ button {
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
-    list-style-type: auto;
+    /* list-style-type: auto; */
 }
 
 .moduls ol:last-child {

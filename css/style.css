@@ -900,12 +900,12 @@ button {
 }
 
 .works .itc-slider__btn_prev {
-    left: calc(50% + 50px);
-    transform: translateX(-50%) rotate(180deg);
+    left: calc(50% - 50px);
 }
 
 .works .itc-slider__btn_next {
-    left: calc(50% - 50px);
+    left: calc(50% + 50px);
+    transform: translateX(-50%) rotate(180deg);
 }
 
 .works .itc-slider__item:nth-child(1) .before-wrap {

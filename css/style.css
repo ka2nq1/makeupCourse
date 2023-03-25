@@ -100,11 +100,11 @@ button {
 
 .hero {
     padding-top: 30px;
-    padding-bottom: 470px;
+    padding-bottom: 436px;
     position: relative;
     overflow: hidden;
     background-image: url('../images/heroBg.png');
-    background-position: center -460px;
+    background-position: center -495px;
     background-repeat: no-repeat;
 }
 
@@ -116,6 +116,10 @@ button {
 .hero .container {
     position: static;
     
+}
+
+.hero button {
+    width: 235px;
 }
 
 .hero .decor-text {
@@ -988,7 +992,8 @@ button {
 .reviews .itc-slider__item:nth-child(3) .slide-wrap{
     background-image: url('../images/3reviews.png');
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 101%;
+    background-position: center;
 }
 
 .reviews .itc-slider__btn {

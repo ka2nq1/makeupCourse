@@ -108,6 +108,7 @@ button {
     background-image: url('../images/heroBg.png');
     background-position: center -495px;
     background-repeat: no-repeat;
+    background-size: 1266px;
 }
 
 .hero * {
@@ -131,9 +132,10 @@ button {
 
 .hero .btrfly {
     position: absolute;
-    top: 40px;
-    left: -35px;
-    width: calc(15px + 9em);
+    top: 58px;
+    transform: translateX(-50%);
+    left: calc(50% - 142px);
+    width: 79px;
 }
 
 .hero h1,
@@ -169,11 +171,40 @@ button {
     height: 27px;
 }
 
-@media (max-width: 400px) {
+.hero .star-hero {
+    position: absolute;
+    top: 482px;
+    transform: translateX(-50%);
+    left: calc(50% - 92px);
+}
+
+.hero .star-hero .star-name {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #208895;
+    margin-bottom: 6px;
+}
+.hero .star-hero .star-text {
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 12px;
+    text-align: center;
+    color: #208895;
+}
+
+@media (max-width: 360px) {
     .hero h1,
     .hero h2 {
-        font-size: calc(20px + 20vw);
-        line-height: calc(20px + 20vw);
+        font-size: 85px;
+        line-height: 100px;
+    }
+
+    .hero .btrfly {
+        top: 65px;
+        left: calc(50% - 125px);
     }
 }
 
@@ -997,6 +1028,24 @@ button {
     background-size: 101%;
     background-position: center;
 }
+.reviews .itc-slider__item:nth-child(4) .slide-wrap{
+    background-image: url('../images/4review.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.reviews .itc-slider__item:nth-child(5) .slide-wrap{
+    background-image: url('../images/5review.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.reviews .itc-slider__item:nth-child(6) .slide-wrap{
+    background-image: url('../images/6review.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
 
 .reviews .itc-slider__btn {
     top: 50%;
@@ -1166,8 +1215,9 @@ button {
 }
 
 .footer .tgWrap img {
-    margin-right: 8px;
-    transform: translateY(2px);
+    margin-right: 13px;
+    width: 20px;
+    transform: translateY(5px);
 }
 
 .footer .policy {

@@ -36,6 +36,8 @@ html {
 body {
     padding: 0 0 37px 0;
     background-color: var(--main-bg);
+    max-width: 600px;
+    margin-inline: auto;
 }
 
 h1, h2, h3 {
@@ -131,7 +133,7 @@ button {
     position: absolute;
     top: 40px;
     left: -35px;
-    width: calc(15px + 20vw);
+    width: calc(15px + 9em);
 }
 
 .hero h1,
@@ -1199,48 +1201,3 @@ button {
 .footer .fisher .desk {
     display: none;
 }
-
-@media (min-width: 600px) {
-    .footer .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-    }
-
-    .footer .container > * {
-        margin-right: 20px;
-        margin-bottom: 0;
-    }
-
-    .footer .policy.desk {
-        display: block;
-    }
-
-    .footer .policy.mobile {
-        display: none;
-    }   
-    .footer .logo {
-        margin-bottom: 26px;
-        width: 264px!important;
-    }
-
-    .footer .tgWrap .topText {
-        font-size: 15px;
-        line-height: 30px;
-        max-width: 271px;
-    }
-
-    .footer .fisher p {
-        margin-left: 0;
-        margin-right: 20px;
-    }
-    
-    .footer .fisher .desk {
-        display: block;
-    }
-
-    .footer .fisher .mobile {
-        display: none;
-    }
-}
-

@@ -40,7 +40,9 @@ body {
     margin-inline: auto;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: var(--title-font);
     font-weight: 400;
     color: var(--main-text-color);
@@ -50,7 +52,7 @@ h1, h2, h3 {
     text-align: center;
 }
 
-p > span {
+p>span {
     font-weight: 600;
 }
 
@@ -65,7 +67,11 @@ section {
 }
 
 button {
-    background: radial-gradient(44.29% 44.29% at 49.79% 83.57%, #91F1FD 0%, rgba(86, 210, 225, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(52.86% 52.86% at 51.06% 10.71%, rgba(99, 225, 241, 0.3) 0%, rgba(96, 219, 235, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, linear-gradient(89.12deg, #43BBCA 0.75%, #50CDDD 28.45%, #5DD8E8 50.51%, #4DCADA 70.01%, #43BBCA 99.25%);
+    background: radial-gradient(44.29% 44.29% at 49.79% 83.57%, #91F1FD 0%, rgba(86, 210, 225, 0) 100%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+        , radial-gradient(52.86% 52.86% at 51.06% 10.71%, rgba(99, 225, 241, 0.3) 0%, rgba(96, 219, 235, 0) 100%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+        , linear-gradient(89.12deg, #43BBCA 0.75%, #50CDDD 28.45%, #5DD8E8 50.51%, #4DCADA 70.01%, #43BBCA 99.25%);
     box-shadow: inset 0px 0px 16px #8EF1FE;
     border-radius: 150px;
     padding: 29px 36px 27px 36px;
@@ -90,6 +96,10 @@ button {
     color: var(--second-text-color);
 }
 
+.bold {
+    font-weight: 600px;
+}
+
 .decor-text {
     font-family: 'Good Vibes Pro';
     font-weight: 400;
@@ -102,13 +112,17 @@ button {
 
 .hero {
     padding-top: 30px;
-    padding-bottom: 436px;
     position: relative;
     overflow: hidden;
-    background-image: url('../images/heroBg.png');
     background-position: center -495px;
     background-repeat: no-repeat;
     background-size: 1266px;
+}
+
+.heroImg {
+    width: 100%;
+    transform: translateX(11px);
+    margin-top: 27px;
 }
 
 .hero * {
@@ -118,11 +132,13 @@ button {
 
 .hero .container {
     position: static;
-    
+
 }
 
 .hero button {
+    text-wrap: wrap;
     width: 235px;
+    padding: 20px 33px;
 }
 
 .hero .decor-text {
@@ -187,6 +203,7 @@ button {
     color: #208895;
     margin-bottom: 6px;
 }
+
 .hero .star-hero .star-text {
     font-weight: 400;
     font-size: 8px;
@@ -196,6 +213,7 @@ button {
 }
 
 @media (max-width: 360px) {
+
     .hero h1,
     .hero h2 {
         font-size: 85px;
@@ -214,7 +232,9 @@ button {
 }
 
 .hero p {
+    max-width: 317px;
     text-align: center;
+    margin: 0 auto;
 }
 
 .hero .star {
@@ -275,10 +295,14 @@ button {
 }
 
 .hero a {
-    position: absolute;
-    bottom: 10px;
+    position: relative;
+    display: block;
     left: 50%;
+    width: fit-content;
     transform: translateX(-50%);
+    height: 80px;
+    width: 100%;
+    margin-top: -80px;
 }
 
 /* =========================FORWHOM========================= */
@@ -300,7 +324,10 @@ button {
     -webkit-backdrop-filter: blur(2px);
     border-radius: 15px;
     position: relative;
-    margin-bottom: 70px;
+    margin-bottom: 45px;
+    max-width: 281px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .for-whom .cost::before {
@@ -346,7 +373,7 @@ button {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    margin-bottom: 283px;
+    margin-bottom: 75px;
 }
 
 .for-whom li {
@@ -368,12 +395,10 @@ button {
 }
 
 .for-whom .toy-bg {
-    margin-top: -240px;
+    margin-top: 9px;
     position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-bottom: -169px;
     z-index: -1;
+    width: 100%;
 }
 
 /* =========================SKILLS========================= */
@@ -398,9 +423,6 @@ button {
 
 .program {
     padding-top: 50px;
-    background: var(--accent-bg);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
     border-radius: 50px;
     margin-bottom: 140px;
 }
@@ -456,16 +478,26 @@ button {
     gap: 50px;
 }
 
-.moduls .list > li {
+.moduls .list>li {
     position: relative;
     background: #ffff;
     border-radius: 30px;
     cursor: pointer;
 }
 
+.moduls .modImg {
+    width: 100%;
+    border-radius: 30px;
+    margin-bottom: 34px;
+}
+
+.moduls .textWrap {
+    padding: 0 37px;
+}
+
 .moduls .moduleWrap {
-    background: var(--accent-bg);
-    padding: 40px 27px 40px 37px;
+    background: #ffff;
+    padding-bottom: 40px;
     width: calc(100% + 2px);
     transform: translate(-1px, 0px);
     backdrop-filter: blur(5px);
@@ -473,18 +505,33 @@ button {
     border-radius: 30px;
 }
 
+.moduls .bonusWrap {
+    background: var(--accent-bg);
+    padding-top: 40px;
+    color: var(--main-text-color);
+}
+
 .moduls .moduleWrap .second-title {
     text-align: left;
-    color: var(--main-text-color);
+    color: #282828;
     margin-bottom: 27px;
+}
+
+.moduls .bonusWrap .second-title {
+    color: var(--main-text-color);
 }
 
 .moduls .moduleWrap .btn {
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
+    color: #282828;
     text-align: center;
     text-decoration-line: underline;
+}
+
+.moduls .bonusWrap .btn {
+    color: var(--main-text-color);
 }
 
 .moduls .programDropdown {
@@ -500,7 +547,7 @@ button {
     text-align: left;
 }
 
-.moduls .list > .active .programDropdown {
+.moduls .list>.active .programDropdown {
     max-height: 1000px;
 }
 
@@ -515,7 +562,11 @@ button {
     top: -20px;
     min-width: 112px;
     height: 40px;
-    background: radial-gradient(44.29% 44.29% at 49.79% 83.57%, #91F1FD 0%, rgba(86, 210, 225, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(52.86% 52.86% at 51.06% 10.71%, rgba(99, 225, 241, 0.3) 0%, rgba(96, 219, 235, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, linear-gradient(89.12deg, #43BBCA 0.75%, #50CDDD 28.45%, #5DD8E8 50.51%, #4DCADA 70.01%, #43BBCA 99.25%);
+    background: radial-gradient(44.29% 44.29% at 49.79% 83.57%, #91F1FD 0%, rgba(86, 210, 225, 0) 100%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+        , radial-gradient(52.86% 52.86% at 51.06% 10.71%, rgba(99, 225, 241, 0.3) 0%, rgba(96, 219, 235, 0) 100%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+        , linear-gradient(89.12deg, #43BBCA 0.75%, #50CDDD 28.45%, #5DD8E8 50.51%, #4DCADA 70.01%, #43BBCA 99.25%);
     box-shadow: inset 0px 0px 16px #8EF1FE;
     border-radius: 7px;
 }
@@ -547,7 +598,13 @@ button {
 /* ===========================RATES============================= */
 
 .rates {
-    margin-bottom: 140px;
+    margin-bottom: 70px;
+}
+
+.rates .title-wrap {
+    max-width: 216px;
+    margin: 0 auto;
+    margin-bottom: 21px;
 }
 
 .rates .title-decor {
@@ -567,7 +624,7 @@ button {
     background: #FFFFFF;
     box-shadow: 0px 13px 30px rgba(0, 0, 0, 0.05);
     border-radius: 30px;
-    padding: 40px 44px 100px 40px;
+    padding: 50px 44px 80px 40px;
     position: relative;
 }
 
@@ -590,15 +647,17 @@ button {
 
 .rates .item-list p {
     color: var(--second-text-color);
-    display: flex;
-    align-items: baseline;
-    gap: 20px;
+    padding-left: 20px;
+    position: relative;
 }
 
 .rates .item-list p:before {
     content: '';
     display: block;
-    min-width: 9px;
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 9px;
     height: 9px;
     border-radius: 50%;
     background: radial-gradient(42.12% 77.78% at 61.11% 16.67%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%), #EC4A9B;
@@ -613,7 +672,7 @@ button {
 }
 
 .rates .item .old-price {
-    font-size: 40px;
+    font-size: 50px;
     line-height: 50px;
     color: var(--third-text-color);
     font-family: var(--title-font);
@@ -627,11 +686,14 @@ button {
 .rates .item .new-price {
     font-family: var(--title-font);
     font-weight: 400;
-    font-size: 50px;
+    font-size: 77px;
     line-height: 50px;
     text-align: center;
     text-transform: uppercase;
-    color: var(--second-text-color);
+    background-color: #FF2E2E;
+    color: var(--main-text-color);
+    border-radius: 10px;
+    padding: 26px 20px 10px 20px;
     margin-bottom: 19px;
 }
 
@@ -655,7 +717,7 @@ button {
     text-align: center;
     color: #818181;
     margin-bottom: 16px;
-} 
+}
 
 .rates .item .my-price {
     color: var(--second-text-color);
@@ -672,7 +734,7 @@ button {
     flex-direction: column;
     align-items: center;
     position: absolute;
-    bottom: -69px;
+    bottom: -50px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -728,7 +790,11 @@ button {
 }
 
 .rates .personal .saving {
-    background: radial-gradient(44.29% 44.29% at 49.79% 83.57%, #91F1FD 0%, rgba(86, 210, 225, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(52.86% 52.86% at 51.06% 10.71%, rgba(99, 225, 241, 0.3) 0%, rgba(96, 219, 235, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, linear-gradient(89.12deg, #43BBCA 0.75%, #50CDDD 28.45%, #5DD8E8 50.51%, #4DCADA 70.01%, #43BBCA 99.25%);
+    background: radial-gradient(44.29% 44.29% at 49.79% 83.57%, #91F1FD 0%, rgba(86, 210, 225, 0) 100%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+        , radial-gradient(52.86% 52.86% at 51.06% 10.71%, rgba(99, 225, 241, 0.3) 0%, rgba(96, 219, 235, 0) 100%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+        , linear-gradient(89.12deg, #43BBCA 0.75%, #50CDDD 28.45%, #5DD8E8 50.51%, #4DCADA 70.01%, #43BBCA 99.25%);
     box-shadow: inset 0px 0px 16px #8EF1FE;
 }
 
@@ -814,16 +880,23 @@ button {
 .rates .decor-wrap .places span {
     font-weight: 600;
 }
+
 /* ===========================SPEAKER============================= */
 
-.speaker {
-    background-image: url('../images/speakerPerson.png');
+/* .speaker {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center 49px;
+} */
+
+.speaker .speakerImg {
+    width: 100%;
+    border-radius: 30px;
+    margin-bottom: 19px;
 }
+
 .speaker .title {
-    margin-bottom: 262px;
+    margin-bottom: 18px;
 }
 
 .speaker .decor-text {
@@ -865,7 +938,9 @@ button {
     min-width: 9px;
     height: 9px;
     border-radius: 50%;
-    background: radial-gradient(42.12% 77.78% at 61.11% 16.67%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #EC4A9B;
+    background: radial-gradient(42.12% 77.78% at 61.11% 16.67%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+        , #EC4A9B;
 }
 
 /* ===========================WORKS============================= */
@@ -873,6 +948,7 @@ button {
 .works {
     margin-bottom: 170px;
 }
+
 .works .title {
     margin-bottom: 18px;
 }
@@ -892,7 +968,7 @@ button {
     overflow: hidden;
 }
 
-.works .slide-wrap > div {
+.works .slide-wrap>div {
     width: 50%;
     aspect-ratio: 84 / 113;
     background-size: contain;
@@ -913,6 +989,7 @@ button {
 .works .after-text {
     width: 100%;
     text-align: left;
+    color: transparent;
     padding: 0 0 12px 19px;
     background: linear-gradient(0.5deg, #141414 16.37%, rgba(24, 19, 23, 0) 100.37%);
 }
@@ -929,6 +1006,7 @@ button {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .works .itc-slider__btn:hover,
 .works .itc-slider__btn:focus {
     background-image: url('../images/sliderBtn.png');
@@ -949,6 +1027,7 @@ button {
     background: url('../images/firstSlideBefore.jpg');
     background-size: contain;
 }
+
 .works .itc-slider__item:nth-child(1) .after-wrap {
     background: url('../images/firstSlideAfter.jpg');
     background-size: contain;
@@ -958,6 +1037,7 @@ button {
     background: url('../images/2before.jpg');
     background-size: contain;
 }
+
 .works .itc-slider__item:nth-child(2) .after-wrap {
     background: url('../images/2after.jpg');
     background-size: contain;
@@ -967,6 +1047,7 @@ button {
     background: url('../images/3before.jpg');
     background-size: contain;
 }
+
 .works .itc-slider__item:nth-child(3) .after-wrap {
     background: url('../images/3after.jpg');
     background-size: contain;
@@ -976,6 +1057,7 @@ button {
     background: url('../images/4before.jpg');
     background-size: contain;
 }
+
 .works .itc-slider__item:nth-child(4) .after-wrap {
     background: url('../images/4after.jpg');
     background-size: contain;
@@ -985,6 +1067,7 @@ button {
     background: url('../images/5before.jpg');
     background-size: contain;
 }
+
 .works .itc-slider__item:nth-child(5) .after-wrap {
     background: url('../images/5after.jpg');
     background-size: contain;
@@ -1012,35 +1095,40 @@ button {
     background: #010101;
 }
 
-.reviews .itc-slider__item:nth-child(1) .slide-wrap{
+.reviews .itc-slider__item:nth-child(1) .slide-wrap {
     background-image: url('../images/1reviews.png');
     background-repeat: no-repeat;
     background-size: contain;
 }
-.reviews .itc-slider__item:nth-child(2) .slide-wrap{
+
+.reviews .itc-slider__item:nth-child(2) .slide-wrap {
     background-image: url('../images/2reviews.png');
     background-repeat: no-repeat;
     background-size: contain;
 }
-.reviews .itc-slider__item:nth-child(3) .slide-wrap{
+
+.reviews .itc-slider__item:nth-child(3) .slide-wrap {
     background-image: url('../images/3reviews.png');
     background-repeat: no-repeat;
     background-size: 101%;
     background-position: center;
 }
-.reviews .itc-slider__item:nth-child(4) .slide-wrap{
+
+.reviews .itc-slider__item:nth-child(4) .slide-wrap {
     background-image: url('../images/4review.jpg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
 }
-.reviews .itc-slider__item:nth-child(5) .slide-wrap{
+
+.reviews .itc-slider__item:nth-child(5) .slide-wrap {
     background-image: url('../images/5review.jpg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
 }
-.reviews .itc-slider__item:nth-child(6) .slide-wrap{
+
+.reviews .itc-slider__item:nth-child(6) .slide-wrap {
     background-image: url('../images/6review.jpg');
     background-repeat: no-repeat;
     background-size: contain;
@@ -1059,6 +1147,7 @@ button {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .reviews .itc-slider__btn:before {
     display: none;
 }
@@ -1084,6 +1173,7 @@ button {
 .answers .title {
     margin-bottom: 18px;
 }
+
 .answers .questionsItem {
     background: linear-gradient(52.7deg, #1F1F1F 8.37%, #2D2D2D 81.06%);
     border: 1px solid #FFFFFF;
@@ -1097,7 +1187,7 @@ button {
 }
 
 .answers .questionsItem.active {
-    max-height: 300px!important;
+    max-height: 300px !important;
 }
 
 .answers .questionsItem:before {

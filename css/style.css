@@ -498,8 +498,7 @@ button {
 .moduls .moduleWrap {
     background: #ffff;
     padding-bottom: 40px;
-    width: calc(100% + 2px);
-    transform: translate(-1px, 0px);
+    width: 100%;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border-radius: 30px;

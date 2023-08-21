@@ -686,7 +686,7 @@ button {
     font-family: var(--title-font);
     font-weight: 400;
     font-size: 77px;
-    line-height: 50px;
+    line-height: 80px;
     text-align: center;
     text-transform: uppercase;
     background-color: #FF2E2E;

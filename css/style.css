@@ -52,10 +52,6 @@ h3 {
     text-align: center;
 }
 
-p>span {
-    font-weight: 600;
-}
-
 section {
     margin-bottom: 45px;
 }
@@ -1327,7 +1323,7 @@ button {
 }
 
 .footer .tgWrap {
-    margin-bottom: 27px;
+    margin-bottom: 30px;
 }
 
 .footer .tgWrap .topText {
@@ -1372,9 +1368,23 @@ button {
     display: inline-block;
 }
 
+.footer .address {
+    margin-bottom: 10px;
+}
+
+.footer .address p {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+/* 
 .footer .policy.mobile {
     margin-bottom: 44px;
-}
+} */
 
 .footer .fisher {
     display: flex;
